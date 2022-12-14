@@ -16,7 +16,7 @@ export const Navigation = () => {
           <ul>
             <li>
               <NavLink
-                to="/"
+                to="/home"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
                 Home
@@ -43,8 +43,8 @@ export const Navigation = () => {
         <Routes>
           <Route path="/about" element={<h1>About page</h1>} />
           <Route path="/users" element={<h1>Users page</h1>} />
-          <Route path="/" element={<h1>Home page</h1>} />
-          <Route path="/*" element={<Navigate to="/" replace />} />
+          <Route path="/home" element={<h1>Home page</h1>} />
+          <Route path="/*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
     </BrowserRouter>
