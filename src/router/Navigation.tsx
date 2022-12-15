@@ -5,6 +5,7 @@ import {
   NavLink,
   Navigate,
 } from "react-router-dom";
+import { LaziPage1, LaziPage2, LaziPage3 } from "../01-lazyload/pages";
 import moduleLogo from "../logo.svg";
 
 export const Navigation = () => {
@@ -16,35 +17,35 @@ export const Navigation = () => {
           <ul>
             <li>
               <NavLink
-                to="/home"
+                to="/lazy1"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
-                Home
+                lazy1
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/about"
+                to="/lazy2"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
-                About
+                lazy2
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/users"
+                to="/lazy3"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
-                Users
+                lazy3
               </NavLink>
             </li>
           </ul>
         </nav>
         <Routes>
-          <Route path="/about" element={<h1>About page</h1>} />
-          <Route path="/users" element={<h1>Users page</h1>} />
-          <Route path="/home" element={<h1>Home page</h1>} />
-          <Route path="/*" element={<Navigate to="/home" replace />} />
+          <Route path="/lazy1" element={<LaziPage1 />} />
+          <Route path="/lazy2" element={<LaziPage2 />} />
+          <Route path="/lazy3" element={<LaziPage3 />} />
+          <Route path="/*" element={<Navigate to="/lazy1" replace />} />
         </Routes>
       </div>
     </BrowserRouter>
