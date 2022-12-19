@@ -1,6 +1,7 @@
 import { ProductCard } from "../components/ProductCard";
 import logocafe from "../assets/coffee-mug.png";
 import { ProductButons, ProductImage, ProductTitle } from "../components";
+import "../styles/custom-styles.css";
 
 const product = {
   id: "1",
@@ -27,10 +28,18 @@ export default function ShopingPage() {
           <ProductCard.Button />
         </ProductCard>
 
-        <ProductCard product={product}>
-          <ProductImage />
-          <ProductTitle />
-          <ProductButons />
+        <ProductCard className="bg-dark" product={product}>
+          <ProductImage className="custom-image" />
+          <ProductTitle className="tex-white" />
+          <ProductButons className="custom-buttons" />
+        </ProductCard>
+
+        <ProductCard style={{ background: "white" }} product={product}>
+          <ProductImage
+            style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.5" }}
+          />
+          <ProductTitle style={{ fontWeight: "bold" }} />
+          <ProductButons style={{ display: "flex", justifyContent: "end" }} />
         </ProductCard>
       </div>
     </div>
