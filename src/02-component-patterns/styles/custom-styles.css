@@ -16,3 +16,9 @@
   background-color: rgb(53, 53, 53);
   border-radius: 20px;
 }
+
+.shopping-cart {
+  position: fixed;
+  top: 0px;
+  right: 10px;
+}
