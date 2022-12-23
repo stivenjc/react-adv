@@ -59,7 +59,7 @@ function newSchame() {
       .required("Requerido"),
     LastName: Yup.string().required("requeridoooo"),
     email: Yup.string().email("no tien un formato valido").required("required"),
-    termins: Yup.boolean().oneOf([true], "debe de aceptar las condiciones"),
+    termins: Yup.boolean().isTrue("debe de aceptar las condiciones"),
     jobTypes: Yup.string().required(),
   };
 }
